@@ -26,9 +26,7 @@ def is_acyclic(adj_matrix: list[list[int]]) -> bool:
                     if len(nodes_to_explore):
                         prev_node = current_node
                         current_node = nodes_to_explore.pop(0)
-                        if current_node == prev_node:
-                            return False
-                        elif current_node == target_node:
+                        if current_node == prev_node or current_node == target_node:
                             return False
                     else:
                         break

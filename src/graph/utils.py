@@ -3,7 +3,7 @@ def generate_adjacency_matrix(num_nodes: int, edges: list[tuple[int, int]]) -> l
     result = [[] for _ in range(num_nodes)]
 
     # Populate adjacency matrix with directed edges
-    for (start_node, end_node) in edges:
+    for start_node, end_node in edges:
         # Adjust for zero-based indexing
         result[start_node - 1].append(end_node - 1)
 
